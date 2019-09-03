@@ -165,13 +165,13 @@ void bubble(){
 	pBuffer = realloc(pBuffer, *size + (sizeof(user)));
 	rep();
 
-	user *aux = (user*)(pBuffer + *size + 1);
+	user *aux = (user*)(pBuffer + *size);
 
 	for(*temp = 0; *temp < *usersLen; *temp = *temp + 1){
 		for(*temporary = 1; *temporary < *usersLen - 1; *temporary = *temporary + 1){
 
 			user *j = (user*)((pBuffer + (sizeof(int) * 5)) + (sizeof(user) * *temporary));
-			user *nextJ = ((&(*j) + sizeof(user)) + 1);
+			user *nextJ = ((&(*j) + sizeof(user)));
 
 			if(j->age > nextJ->age){
 				*aux = *j;
