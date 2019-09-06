@@ -53,6 +53,8 @@ int main(){
 		}
 
     } while(*option != 4);
+	
+	free(pBuffer);
 
 }
 
